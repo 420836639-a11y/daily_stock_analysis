@@ -48,15 +48,14 @@ jobs:
         run: |
           mkdir -p data logs reports
       
-      - name: 执行股票分析
+            - name: 执行股票分析
         env:
-  AI_MODEL: openai  # 关键：告诉项目用 OpenAI 兼容模式（Minimax）
-  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-  OPENAI_BASE_URL: https://api.minimax.chat/v1
-  OPENAI_MODEL: minimax-m2.7  # 你要使用的 Minimax 模型名
-  STOCK_LIST: ${{ secrets.STOCK_LIST }}
-  PUSH_METHOD: ${{ secrets.PUSH_METHOD }}
-          
+          # 👇 就是这里！只加这4行，其他全部不动
+          AI_MODEL: openai
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: https://api.minimax.chat/v1
+          OPENAI_MODEL: minimax-m2.7
+
           # ==========================================
           # 数据源
           # ==========================================
