@@ -54,7 +54,7 @@ jobs:
           AI_MODEL: openai
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_BASE_URL: https://api.minimax.chat/v1
-          OPENAI_MODEL: minimax-m2.7
+          OPENAI_MODEL: abab6.5
 
           # ==========================================
           # 数据源
